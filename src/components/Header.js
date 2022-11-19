@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
     return (
-            <header className="h-48 flex items-center justify-center min-w-4/5 w-4/5 border-4 m-auto my-6">
+            <header className="h-48 flex items-center justify-center min-w-4/5 w-4/5 m-auto my-6">
                 <Link to="/" className="flex flex-row justify-center items-center bg-none w-full h-full">
                     <svg className="w-10 lg:w-20 rounded-none mr-4" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="256px" height="256px" viewBox="0 0 256 256" version="1.1" preserveAspectRatio="xMidYMid">
 	<g>
