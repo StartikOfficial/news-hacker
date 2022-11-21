@@ -51,7 +51,7 @@ export default function MainPage() {
              :  
             items?.map((el, i) => 
             <Link className="min-w-full"
-            to={el?.id.toString()}>
+            to={"news-hacker/"+el?.id.toString()}>
             <li className="h-max max-680:text-sm px-8 py-4 flex flex-row mb-7 items-center justify-between min-w-full drop-shadow-2xl bg-[#2d2d3a]" key={i}>
                 <div className="Description flex flex-col mr-10 w-full">
                         <h2 className="font-bold">{el?.title}</h2>
