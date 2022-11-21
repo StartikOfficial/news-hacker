@@ -8,7 +8,7 @@ $ git clone https://github.com/StartikOfficial/news-hacker
 
 3. Загрузите зависимости 
 ```
-$ yarn add
+$ yarn
 ```
 4. Запустите проект
 ```
