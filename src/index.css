@@ -27,3 +27,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@layer components {
+  .comments__section {
+    @apply mx-6 mb-0 mt-8 pb-4
+  }
+  .comment {
+    @apply shadow-2xl mb-8 flex flex-col pb-4
+  }
+}

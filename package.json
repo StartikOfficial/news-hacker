@@ -1,7 +1,7 @@
 {
   "name": "hacker-news_my-project",
   "version": "0.1.0",
-  "homepage": "https://StartikOfficial.github.io/news-hacker",
+  "homepage": "https://StartikOfficial.github.io",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.0",

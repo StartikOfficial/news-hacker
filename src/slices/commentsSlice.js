@@ -3,6 +3,7 @@ import axios from "axios";
 
 const URL = "https://hacker-news.firebaseio.com/v0/";
 
+
 export const getComments = createAsyncThunk(
   "commentsData/getComments", 
   async (arr) => {
@@ -11,8 +12,8 @@ export const getComments = createAsyncThunk(
             const response = await axios.get(`${URL}item/${itemId}.json`);
             return response.data;
           }));
-          console.log(comments);
-          return comments;
+          // console.log(comments);
+          return comments
       } catch (error) {
         console.error(error);
       }
