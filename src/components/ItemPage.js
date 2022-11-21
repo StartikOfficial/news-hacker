@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 
 import { getComments, selectComments, selectLoadingState } from "../slices/commentsSlice";
 import { getNewItems, selectItems } from "../slices/storiesDataSlice";
@@ -14,6 +14,8 @@ export default function ItemPage() {
     // console.log(loadingCommentsState);
 
     const {id} = useParams();
+
+    +id && <Redirect to="/"/>;
     const dispatch = useDispatch();
     const itemMainId = [+id];
 
@@ -29,7 +31,7 @@ export default function ItemPage() {
 
     return (
         <>
-        <Link className="no-underline" to="/"><svg className="mb-6" 
+        <Link className="no-underline" to="/news-hacker"><svg className="mb-6" 
   width="48"
   height="48"
   viewBox="0 0 24 24"

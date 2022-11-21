@@ -13,7 +13,7 @@ function App() {
 
 
         <Switch>
-          <Route exact path="/" component={MainPage} />
+          <Route exact path="/news-hacker" component={MainPage} />
           <Route path="/:id" component={ItemPage} />
         </Switch>
           
