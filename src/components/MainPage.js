@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 import { selectItems, getNewItems, selectLoadingState } from "../slices/storiesDataSlice";
 import { unixToDate } from "../utils/unixToDate";
@@ -34,7 +34,15 @@ export default function MainPage() {
       }, [timeLeft, loadingItemsState]);
 
       // устранение бага, когда на первом месте массива появляется null, undefined
-      (items[0] == null) && dispatch(getNewItems());
+      (items[0] == null ) && dispatch(getNewItems());
+      
+      const history = useHistory();
+
+      useEffect(() => {
+        if (history.action === "POP") {
+            dispatch(getNewItems());
+        }
+      }, []);
 
     return (
         <>
@@ -51,7 +59,7 @@ export default function MainPage() {
              :  
             items?.map((el, i) => 
             <Link className="min-w-full"
-            to={"news-hacker/"+el?.id.toString()}>
+            to={"/news-hacker/"+el?.id.toString()}>
             <li className="h-max max-680:text-sm px-8 py-4 flex flex-row mb-7 items-center justify-between min-w-full drop-shadow-2xl bg-[#2d2d3a]" key={i}>
                 <div className="Description flex flex-col mr-10 w-full">
                         <h2 className="font-bold">{el?.title}</h2>

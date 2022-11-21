@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { getComments, selectComments, selectLoadingState } from "../slices/commentsSlice";
 import { getNewItems, selectItems } from "../slices/storiesDataSlice";
@@ -15,7 +15,6 @@ export default function ItemPage() {
 
     const {id} = useParams();
 
-    +id && <Redirect to="/"/>;
     const dispatch = useDispatch();
     const itemMainId = [+id];
 
