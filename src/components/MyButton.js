@@ -8,7 +8,7 @@ export default function MyButton({kidsKids}) {
     const [otherComments, setOtherComments] = useState([]);
     const dispatch = useDispatch();
 
-    console.log(otherComments)
+    // console.log(otherComments)
 
     function showComments(kids) {
         if (kids[0]) 
